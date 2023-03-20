@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 
 const FormValidationErrors = (props) => {
 	const errors = props.errors;
-	if (Object.keys(errors).length === 0) {    return null;  }
+	if (Object.keys(errors).length === 0) { return null; }
 	console.log(errors)
 	return (
 		<>
@@ -210,8 +210,8 @@ const Form = (props) => {
 };
 
 function PassengerForm(props) {
-	const [active, setActive] = useState(props.activeForm);
-	const [documents, setDocuments] = useState(true);
+	const [setActive] = useState(props.activeForm);
+	const [setDocuments] = useState(true);
 
 	const handleActiveInput = (active) => setActive(active);
 

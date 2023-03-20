@@ -1,7 +1,7 @@
 import * as axios from 'axios';
 
 const instance = axios.create({
-	baseURL: 'https://fe-diplom.herokuapp.com/'
+	baseURL: 'https://netology-trainbooking.netoservices.ru/'
 });
 
 export const api = {
@@ -59,7 +59,7 @@ export const api = {
 	}
 };
 ///////////////////////////////////////////
-fetch('https://fe-diplom.herokuapp.com/', {
+fetch('https://netology-trainbooking.netoservices.ru/order', {
 		method: 'POST',
 		body: JSON.stringify({
 			"user": {

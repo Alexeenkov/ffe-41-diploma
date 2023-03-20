@@ -3,7 +3,7 @@ import { Slider, Rail, Handles, Tracks, Ticks } from 'react-compound-slider';
 import { Handle, Track, Tick } from './components/components';
 
 const sliderStyle = {
-  margin: '0%',
+  margin: '0',
 	position: 'relative',
 	width: '100%'
 };
@@ -21,10 +21,10 @@ const railStyle = {
 const domain = [0, 5000];
 
 function ReactCompoundSlider(props) {
-  const [values, setValues] = useState([0, 5000])
+  const [values, setValues] = useState([0, 5000]);
 
   const onChange = (values) => {
-		setValues({ values });
+		setValues(values);
 		props.setPrice(values);
   };
 

@@ -3,7 +3,7 @@ import { Slider, Rail, Handles, Tracks, Ticks } from 'react-compound-slider';
 import { Handle, Track, Tick } from './components/componentsSliderSmall';
 
 const sliderStyle = {
-  margin: '0%',
+  margin: '0',
 	position: 'relative',
 	width: '100%'
 };

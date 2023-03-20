@@ -514,6 +514,7 @@ footer {
 	border: 2px solid #C4C4C4;
 	border-radius: 5px;
 	margin-left: 15px;
+	flex-shrink: 0;
 }
 
 .page-search-select-number:hover {
@@ -529,8 +530,10 @@ footer {
 	background: #FFA800;
 }
 
-.page-search-select-number+.active {
+.page-search-select-number.active {
 	background: #FFA800;
+	border-color: #FFA800;
+	color: #fff;
 }
 
 .react-compound-slider {

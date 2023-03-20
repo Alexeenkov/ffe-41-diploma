@@ -30,6 +30,8 @@ const filterTicketsAndSeatsReducer = (state = initState, action) => {
 
 	switch (action.type) {
 		case SET_TICKETS_AND_SEATS:
+			console.log('action.fieldName', action.fieldName);
+			console.log('action.fieldValue', action.fieldValue);
 			return {
 				...state, [action.fieldName]: action.fieldValue
 			};
@@ -46,8 +48,10 @@ export const filterTicketsAndSeatsReducerTC = (fieldName, fieldValue) => (dispat
 				getState().filterChoiceTicketsAndSeatsPages
 			)
 				.then(res => {
+					console.log(res);
 					dispatch(filterTicketsAndSeatsAC('ticketsArray', res.data.items));
 					dispatch(filterTicketsAndSeatsAC('totalCountTickets', res.data.total_count));
+					console.log('СКРОЙСЯ!');
 					dispatch(filterTicketsAndSeatsAC('preloader', false));
 				});
 		} else if (getState().filterChoiceTicketsAndSeatsPages.actualPage === '/seat_selection') {

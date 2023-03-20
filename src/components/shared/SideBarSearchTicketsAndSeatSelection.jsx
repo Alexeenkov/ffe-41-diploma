@@ -31,25 +31,6 @@ function SideBarSearchTicketsAndSeatSelection(props) {
 		props.getLasRoutes();
 	}, []);
 
-	// componentDidUpdate(prevProps, prevState) {
-	// 	if (prevProps.total_count !== this.props.total_count ||
-	// 		prevProps.have_second_class !== this.props.have_second_class ||
-	// 		prevProps.have_third_class !== this.props.have_third_class ||
-	// 		prevProps.have_fourth_class !== this.props.have_fourth_class ||
-	// 		prevProps.have_first_class !== this.props.have_first_class ||
-	// 		prevProps.have_wifi !== this.props.have_wifi ||
-	// 		prevProps.have_express !== this.props.have_express ||
-	// 		prevProps.price_arr !== this.props.price_arr ||
-	// 		prevProps.start_departure_hour_arr !== this.props.start_departure_hour_arr ||
-	// 		prevProps.start_arrival_hour_arr !== this.props.start_arrival_hour_arr ||
-	// 		prevProps.end_departure_hour_arr !== this.props.end_departure_hour_arr ||
-	// 		prevProps.end_arrival_hour_arr !== this.props.end_arrival_hour_arr ||
-	// 		prevProps.customRangeCostFrom !== this.props.customRangeCostFrom ||
-	// 		prevProps.customRangeCostTo !== this.props.customRangeCostTo
-	// 	) {
-	// 		this.props.setSeatsAndTickets('actualPage', this.props.match.url);
-	// 	};
-	// };
 	useEffect(() => {
 		props.setSeatsAndTickets('actualPage', props.match.url);	
 	}, [props.total_count, props.have_second_class, props.have_third_class,
@@ -58,9 +39,9 @@ function SideBarSearchTicketsAndSeatSelection(props) {
 	    props.start_arrival_hour_arr, props.end_departure_hour_arr,
 	    props.end_arrival_hour_arr, props.customRangeCostFrom, props.customRangeCostTo]);	
 
-	const handleWhereFromDate = (event) => setWhereFromDate(event.currentTarget.value);
+	const handleWhereFromDate = (event) => props.setWhereFromDate(event.currentTarget.value);
 
-	const handleWhereToDate = (event) => setWhereToDate(event.currentTarget.value);
+	const handleWhereToDate = (event) => props.setWhereToDate(event.currentTarget.value);
 
 	const checkSecondClass = (event) => props.setSeatsAndTickets('have_second_class', event.currentTarget.checked);
 

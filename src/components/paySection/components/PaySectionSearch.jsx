@@ -148,7 +148,7 @@ function PaySectionSearch(props) {
 								<p className="ml-2 text-black-50">Наличными</p>
 							</div>
 						</form>
-						<div className="d-flex justify-content-end mt-5">
+						<div className="d-flex justify-content-start mt-5">
 							<button 
 							className="btn btn-warning text-white font-weight-bold pl-5 pr-5 mt-5 mb-3"  
 							type="button"

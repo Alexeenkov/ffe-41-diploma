@@ -38,7 +38,7 @@ function SectionSearchTickets(props) {
 				<div className="preloader d-flex justify-content-center"><p className="preloader-text">ИДЕТ ПОИСК</p><img src={preloderAnimation} alt="" />
 				</div>
 				:
-				<div className="container d-flex flex-wrap">
+				<div className="container d-flex">
 					<SideBarSearchTicketsAndSeatSelection />
 
 					<SearchTicketsJSX />

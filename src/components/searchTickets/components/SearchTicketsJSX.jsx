@@ -137,7 +137,7 @@ function SearchTicketsJSX(props) {
 			{props.ticketsArray ? props.ticketsArray.map((el, idx) =>
 				<ResultSearchTickets key={idx} state={el} setTrainId={setTrainId} />) : []}
 
-			<div className="d-flex justify-content-end mt-5">
+			<div className="d-flex justify-content-start mt-5">
 				<button className="page-search-select-number"
 					type="button"
 					onClick={setPrevPageOffset}

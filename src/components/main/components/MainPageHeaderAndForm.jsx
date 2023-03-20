@@ -84,6 +84,11 @@ function MainPageHeaderAndForm(props) {
 		cityWhereToId === ''
 	);
 
+	const handleSwapsFielsValues = () => {
+		setWhereFromCity(whereToCity);
+		setWhereToCity(whereFromCity);
+	};
+
 	const options = dataCities.map(el => el.name);
 
 	return (
@@ -110,7 +115,10 @@ function MainPageHeaderAndForm(props) {
 											className="input-typeahead"
 										/>
 									</Fragment>
-									<img className="mt-auto mb-2" src={iconCachedWhite} alt="..." />
+
+									<button type='button' onClick={handleSwapsFielsValues}>
+										<img className="mt-auto mb-2" src={iconCachedWhite} alt="..." />
+									</button>
 
 									<Typeahead
 										value={whereToCity}
